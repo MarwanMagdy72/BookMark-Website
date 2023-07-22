@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- // ℂ𝕣𝕖𝕒𝕥𝕖𝕕 𝔹𝕪 𝕄𝕒𝕣𝕨𝕒𝕟 𝕄𝕒𝕘𝕕𝕪 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/favicon.png" />
+    <title>BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/Normalize.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="bookMark ">
+
+
+        <div class="container w-75 mx-auto my-5">
+            <div class="mainHead text-center mb-5">
+                <h1>Bookmarker</h1>
+            </div><hr>
+
+            <div class="subHead mt-4 mb-5 ">
+                <h3 class="text-center"><i class="fa-solid fa-bookmark fIcon"></i> <span>Bookmark your</span> favorite sites <i class="fa-solid fa-bookmark lIcon"></i></h3>
+            </div>
+
+            <div class="inputs ">
+                <label class="mb-2 "> <i class="fa-solid fa-book-bookmark "></i> Site Name</label>
+                <input type="text" placeholder="BookMark Name" onclick="showNameRules()" onkeyup="validName()" class="form-control mb-2 p-1" id="nameInput"/>
+                <p id="validName" class="mb-3 d-none"><i class="fa-solid fa-greater-than"></i> Name Must Start With Uppercase Letter <br><i class="fa-solid fa-greater-than"></i> Name Must Contains At Least 4 Letters </p>
+
+                <label class="mb-2 mt-2"><i class="fa-solid fa-link"></i> Site URL</label>
+                <input type="url" placeholder="Website URL" onclick="showUrlRules()" onkeyup="validUrl()" class="form-control mb-2 p-1 " id="urlInput"/>
+                <p id="validUrl" class="d-none"><i class="fa-solid fa-greater-than"></i> Please Enter A Valid URL</p>
+
+                    <div class="d-flex mt-4 mb-4" action="">
+                        <button class="btn btn-danger  w-25 m-auto " onclick="createSite()">Submit</button>
+                    </div>
+                    
+                <hr class="mb-5">
+            </div>
+            <div class="table ">
+                <table class="table table-striped text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">Index</th>
+                        <th scope="col">Website Name</th>
+                        <th scope="col">Visit</th>
+                        <th scope="col">Delete</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tableBody">
+
+                    </tbody>
+                  </table>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

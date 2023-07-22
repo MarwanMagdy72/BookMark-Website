@@ -1,0 +1,70 @@
+/* // ℂ𝕣𝕖𝕒𝕥𝕖𝕕 𝔹𝕪 𝕄𝕒𝕣𝕨𝕒𝕟 𝕄𝕒𝕘𝕕𝕪 */
+body{
+    background-color: #F7ECDE;
+    
+}
+/* Start Main Head */
+.mainHead h1{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    font-family: 'Pacifico', cursive;
+    color: #352e28;
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+::selection{
+    color:#352e28;
+    background-color: #bad536;
+}
+
+.mainHead h1::after{
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+    background-color: #bad536;
+    height: 40%;
+    width: 100%;
+    z-index: -1;
+    transition: 0.5s all;
+}
+.mainHead:hover h1::after{
+    top: 30%;
+    height: 70%;
+}
+h3{
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 25px;
+}
+.subHead .fIcon , .subHead span{
+    color: #9baf4d;
+
+}
+.subHead .lIcon , .subHead h3{
+    color: #bad536;
+
+}
+.inputs label{
+    font-size: 14px;
+    font-weight: 500;
+}
+hr{
+    border-top: 2px dashed #000;
+}
+
+
+input[type="text"]:focus,
+input[type="url"]:focus
+ {   
+  border-color: rgba(126, 239, 104, 0.8);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) , 0 0 8px rgba(126, 239, 104, 0.6);
+  outline: 0 none;
+}
+#validUrl , #validName{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(73, 149, 58);
+}
